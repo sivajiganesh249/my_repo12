@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+     {%block body_block%}
+       <h1>Player Information Update Form</h1>  <hr>
+       <form method="post">
+         {%csrf_token%}
+         Player Number:<input type="text" name="pno" value="{{player.pno}}"><br>
+         Player Name:<input type="text" name="pname" value="{{player.pname}}"><br>
+         Player Salary:<input type="text" name="psal" value="{{player.psal}}"><br>
+         Player Address:<input type="text" name="paddr" value="{{player.paddr}}"><br><br><br>
+         <input type="SUBMIT" class='btn btn-success' value="Update Record">
+       </form>
+
+      {%endblock%}
